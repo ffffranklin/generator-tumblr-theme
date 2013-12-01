@@ -43,7 +43,6 @@ TumblrGenerator.prototype.app = function app() {
     this.mkdir('app');
     this.mkdir('app/app');
     this.mkdir('app/app/javascripts');
-    this.mkdir('app/app/images');
     this.mkdir('app/themes');
     this.mkdir('app/themes/demo');
 
@@ -61,8 +60,8 @@ TumblrGenerator.prototype.projectfiles = function projectfiles() {
 
 TumblrGenerator.prototype.createThemr = function createthemr() {
     this.copy('index.html', 'app/index.html');
-    this.copy('spinner.gif', 'app/images/spinner.gif');
-    this.copy('tumblr-themr-1.0.min.js', 'app/app/javascripts/tumblr-themr-1.0.min.js');
+    this.copy('spinner.gif', 'app/themr/images/spinner.gif');
+    this.copy('tumblr-themr-1.0.min.js', 'app/themr/javascripts/tumblr-themr-1.0.min.js');
 };
 TumblrGenerator.prototype.demoTheme = function demotheme() {
     this.copy('demo.tumblr', 'app/themes/demo.tumblr');

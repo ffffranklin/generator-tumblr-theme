@@ -3,7 +3,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             scripts: {
-                files: ['**/*'],
+                files: [
+                    '**/*.js',
+                    '**/*.tumblr',
+                    '**/*.css'
+                ],
                 options:{
                     livereload: true
                 }
