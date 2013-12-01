@@ -1,5 +1,11 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+    "name": "package",
+    "version": "0.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt": "~0.4.2",
+        "grunt-contrib-connect": "~0.5.0",
+        "grunt-open": "~0.2.2"
+    }
 }
