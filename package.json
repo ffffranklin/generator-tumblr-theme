@@ -1,21 +1,23 @@
 {
-  "name": "generator-tumblr",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "name": "generator-tumblr-theme",
+  "version": "1.0.0",
+  "description": "A tumblr theme generator for Yeoman",
   "keywords": [
+    "tumblr",
+    "theme",
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/ffffranklin/generator-tumblr",
-  "bugs": "https://github.com/ffffranklin/generator-tumblr/issues",
+  "homepage": "https://github.com/ffffranklin/generator-tumblr-theme",
+  "bugs": "https://github.com/ffffranklin/generator-tumblr-theme/issues",
   "author": {
-    "name": "",
+    "name": "Franklin Clark",
     "email": "",
     "url": "https://github.com/ffffranklin"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ffffranklin/generator-tumblr.git"
+    "url": "git://github.com/ffffranklin/generator-tumblr-theme.git"
   },
   "scripts": {
     "test": "mocha"
