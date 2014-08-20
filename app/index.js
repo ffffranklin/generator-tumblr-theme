@@ -22,29 +22,37 @@ TumblrGenerator.prototype.askFor = function askFor() {
     // have Yeoman greet the user.
     console.log(this.yeoman);
 
-    var prompts = [ /* {
-        name: 'blogUrl',
-        message: 'What is your test tumblr url?'
-    } ,*/{
+    var prompts = [  {
+        name: 'themeName',
+        message: 'What is your tumblr name?'
+    } /*,{
         type: 'confirm',
         name: 'agree',
         message: 'Would you like to proceed?'
-    }];
+    }*/];
 
     this.prompt(prompts, function (props) {
-        //this.blogUrl= props.blogUrl;
-
+        this.themeID = this.normalizeName(props.themeName);
+        this.themeName = props.themeName;
         cb();
     }.bind(this));
 
 };
 
+/**
+ * TODO: add find and replace
+ */
+TumblrGenerator.prototype.normalizeName = function normalizeName(name) {
+    return name;
+};
+
 TumblrGenerator.prototype.app = function app() {
     this.mkdir('app');
-    this.mkdir('app/app');
-    this.mkdir('app/app/javascripts');
-    this.mkdir('app/themes');
-    this.mkdir('app/themes/demo');
+    this.mkdir('app/themr');
+    this.mkdir('app/themr/javascripts');
+    this.mkdir('app/theme');
+    this.mkdir('app/theme/styles');
+    this.mkdir('app/theme/scripts');
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
@@ -61,10 +69,14 @@ TumblrGenerator.prototype.projectfiles = function projectfiles() {
 TumblrGenerator.prototype.createThemr = function createthemr() {
     this.copy('index.html', 'app/index.html');
     this.copy('spinner.gif', 'app/themr/images/spinner.gif');
-    this.copy('tumblr-themr-1.0.min.js', 'app/themr/javascripts/tumblr-themr-1.0.min.js');
+    this.copy('tumblr-themr-1.0.js', 'app/themr/javascripts/tumblr-themr-1.0.js');
+    this.copy('tumblr-themr-1.0.config.js', 'app/themr/javascripts/tumblr-themr-1.0.config.js');
+    this.copy('jquery-1.6.4.min.js', 'app/themr/javascripts/jquery-1.6.4.min.js');
+    this.copy('sammy.js', 'app/themr/javascripts/sammy.js');
+    this.copy('sammy.handlebars.js', 'app/themr/javascripts/sammy.handlebars.js');
 };
 TumblrGenerator.prototype.demoTheme = function demotheme() {
-    this.copy('demo.tumblr', 'app/themes/demo.tumblr');
-    this.copy('demo.css', 'app/themes/demo/demo.css');
-    this.copy('demo.js', 'app/themes/demo/demo.js');
+    this.copy('theme.tumblr', 'app/theme.tumblr');
+    this.copy('theme.scss', 'app/theme/styles/main.scss');
+    this.copy('theme.js', 'app/theme/scripts/main.js');
 };
