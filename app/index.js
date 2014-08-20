@@ -77,6 +77,7 @@ TumblrGenerator.prototype.createThemr = function createthemr() {
 };
 TumblrGenerator.prototype.demoTheme = function demotheme() {
     this.copy('theme.tumblr', 'app/theme.tumblr');
+    this.copy('jquery-1.6.4.min.js', 'app/theme/scripts/jquery-1.6.4.min.js');
     this.copy('theme.scss', 'app/theme/styles/main.scss');
     this.copy('theme.js', 'app/theme/scripts/main.js');
 };

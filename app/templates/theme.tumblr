@@ -1,5 +1,5 @@
 {block:tumblrThemr}
-  <link rel="stylesheet" href="themes/demo/demo.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="theme/styles/main.css" type="text/css" media="screen"/>
   <style type="text/css">{CustomCSS}</style>
 
   <div id="wrapper">
@@ -192,6 +192,6 @@
     </div>
     <div class="clear"></div>
   </div>
-  <script type="text/javascript" src="themes/demo/jquery-1.5.1.min.js"></script>
-  <script type="text/javascript" src="themes/demo/demo.js"></script>
+  <script type="text/javascript" src="theme/scripts/jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="theme/scripts/main.js"></script>
 {/block:tumblrThemr}
