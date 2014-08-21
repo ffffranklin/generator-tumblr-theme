@@ -22,10 +22,10 @@ TumblrGenerator.prototype.askFor = function askFor() {
     // have Yeoman greet the user.
     console.log(this.yeoman);
 
-    var prompts = [  {
+    var prompts = [/*{
         name: 'themeName',
         message: 'What is your tumblr name?'
-    } /*,{
+    },{
         type: 'confirm',
         name: 'agree',
         message: 'Would you like to proceed?'
