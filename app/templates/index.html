@@ -217,12 +217,14 @@
     <script src="themr/javascripts/tumblr-themr-1.0.js"></script>
     <script>
         (function ($, conf) {
-            $('#tumblrthemr-config [name=url]').val(conf.url);
-            $('#tumblrthemr-config [name=theme]').val(conf.theme);
-            // check if url is set
-            if (!window.location.hash.match(/url\/.*tumblr\.com$/)) {
-                //$('#tumblrthemr-config [type=submit]').trigger('submit');
-            }
+            $(function () {
+                $('#tumblrthemr-config [name=url]').val(conf.url);
+                $('#tumblrthemr-config [name=theme]').val(conf.theme);
+                // check if a tumblr url is set
+                if (!window.location.hash.match(/url\/.*tumblr\.com$/)) {
+                    $('#tumblrthemr-config').submit();
+                }
+            })
         })(jQuery, themrConf)
     </script>
   </body>
