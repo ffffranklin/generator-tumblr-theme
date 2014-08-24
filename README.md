@@ -48,6 +48,8 @@ When you visit your tumblr blog you should see an rendered XML
 
 Configure your tumbler themer to use your new source by entering in a content source when you initially run the generator
 
+![](http://i.imgur.com/2loXTep.png)
+
 Now your Tumblr Theme will render in your themer app
 
 ## License
