@@ -46,9 +46,16 @@ When you visit your tumblr blog you should see an rendered XML
 
 ![](http://i.imgur.com/AhmkkFx.png)
 
-Configure your tumbler themer to use your new source by entering in a content source when you initially run the generator
+Configure your tumbler themer to use your new source by entering in a content source when you initially run the generator. 
 
 ![](http://i.imgur.com/2loXTep.png)
+
+You can always update the config file, post generation, here: 
+
+```
+$ cat app/themr/javascripts/tumblr-themr-1.0.config.js
+var themrConf = { url: 'myblog.tumblr.com', theme: 'theme' };
+```
 
 Now your Tumblr Theme will render in your themer app
 
