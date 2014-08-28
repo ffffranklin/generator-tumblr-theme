@@ -38,18 +38,9 @@ TumblrGenerator.prototype.askFor = function askFor() {
         },
         name: 'contentURL',
         message: 'What is the URL of the content source for this theme? http://'
-    }/*,{
-        name: 'themeName',
-        message: 'What is your tumblr name?'
-    },{
-        type: 'confirm',
-        name: 'agree',
-        message: 'Would you like to proceed?'
-    }*/];
+    }];
 
     this.prompt(prompts, function (props) {
-        //this.themeID = this.sanitizeName(props.themeName);
-        //this.themeName = props.themeName;
         this.contentURL= props.contentURL;
         cb();
     }.bind(this));
