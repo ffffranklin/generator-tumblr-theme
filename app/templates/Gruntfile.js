@@ -49,6 +49,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-open');
-    grunt.registerTask('default', ['server']);
+    grunt.registerTask('default', ['serve']);
     grunt.registerTask('server', ['sass', 'connect', 'open', 'watch']);
 };
