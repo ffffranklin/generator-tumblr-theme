@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - '0.10'
-  - '0.11'
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-tumblr-theme' ]; then cd .. && eval "mv $currentfolder generator-tumblr-theme" && cd generator-tumblr-theme; fi
