@@ -59,6 +59,10 @@ var themrConf = { url: 'myblog.tumblr.com', theme: 'theme' };
 
 Now your Tumblr Theme will render in your themer app
 
+## Changelog
+
+Recent changes can be viewed on Github on the [Releases Page](https://github.com/ffffranklin/generator-tumblr-theme/releases)
+
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
+[BSD license](http://opensource.org/licenses/bsd-license.php)
