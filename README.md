@@ -1,4 +1,8 @@
-# Tumblr Theme generator [![Build Status](https://secure.travis-ci.org/ffffranklin/generator-tumblr-theme.png?branch=master)](https://travis-ci.org/ffffranklin/generator-tumblr-theme)
+# Tumblr Theme generator 
+
+[![Build Status](https://secure.travis-ci.org/ffffranklin/generator-tumblr-theme.svg?branch=master)](https://travis-ci.org/ffffranklin/generator-tumblr-theme)
+[![NPM version](https://badge.fury.io/js/generator-tumblr-theme.svg)](http://badge.fury.io/js/generator-tumblr-theme)
+[![Dependency Status](https://david-dm.org/ffffranklin/generator-tumblr-theme.svg)](https://david-dm.org/ffffranklin/generator-tumblr-theme)
 
 A Tumblr Theme generator for [Yeoman](http://yeoman.io) that allows you to create a theme for Tumblr.
 
