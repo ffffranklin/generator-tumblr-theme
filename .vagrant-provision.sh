@@ -5,9 +5,6 @@ NPM_DIR="/usr/local/share/npm"
 echo "Provisioning: started..."
 echo "Current user is '$USER'"
 
-echo "Provisioning: Setting locale for apt package manager"
-locale-gen UTF-8
-
 echo "Provisioning: Installing node"
 gem install sass
 
