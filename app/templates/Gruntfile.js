@@ -7,21 +7,18 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
+            options:{
+                livereload: true
+            },
             scripts: {
                 files: [
-                    'app/theme/scripts/*.js',
+                    'app/theme/scripts/**/*/.js',
                     'app/theme.tumblr'
-                ],
-                options:{
-                    livereload: true
-                }
+                ]
             },
             styles: {
-                files: ['app/theme/styles/*.scss'],
-                tasks: ['sass'],
-                options:{
-                    livereload: true
-                }
+                files: ['app/theme/styles/**/*.scss'],
+                tasks: ['sass']
             }
         },
         sass: {
