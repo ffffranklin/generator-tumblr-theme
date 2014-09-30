@@ -5,7 +5,7 @@ NPM_DIR="/usr/local/share/npm"
 echo "Provisioning: started..."
 echo "Current user is '$USER'"
 
-echo "Provisioning: Installing node"
+echo "Provisioning: Installing sass"
 gem install sass
 
 echo "Provisioning: Installing node"
