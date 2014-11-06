@@ -527,7 +527,8 @@ $.noConflict();
                 if (typeof TumblrThemr.cache[c] !== "undefined" && TumblrThemr.cache[c] !== null) {
                     TumblrThemr.render(d, TumblrThemr.cache[c])
                 } else {
-                    $.ajax({url: "http://tumblrxmltojson.icelab.com.au/content/" + c + "?callback=?",dataType: "json",success: function(e) {
+                    // $.ajax({url: "http://tumblrxmltojson.icelab.com.au/content/" + c + "?callback=?",dataType: "json",success: function(e) {
+                    $.ajax({url: "http://" + window.location.hostname + ":8080/content/" + c + "?callback=?",dataType: "json",success: function(e) {
                         TumblrThemr.cache[c] = e;
                         TumblrThemr.render(d, e)
                     },error: function(e, f) {

@@ -10,7 +10,7 @@ gem install sass
 
 echo "Provisioning: Installing node"
 apt-get update
-apt-get install -y nodejs nodejs-legacy npm
+apt-get install -y nodejs nodejs-legacy npm git
 
 echo "Provisioning: Installing yeoman and tumblr theme generator"
 npm config -g set prefix $NPM_DIR
