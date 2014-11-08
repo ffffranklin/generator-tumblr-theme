@@ -1,4 +1,5 @@
 var os = require('os');
+var SpottrServer = require('spottr');
 
 module.exports = function(grunt) {
 
@@ -52,8 +53,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-open');
     grunt.registerTask('default', ['serve']);
-    grunt.registerTask('serve',['sass', 'connect', 'open', 'watch']);
-    grunt.registerTask('serve-remote',['sass', 'connect', 'print-remote', 'watch']);
+    grunt.registerTask('serve',['sass', 'connect', 'spottr', 'open', 'watch']);
+    grunt.registerTask('serve-remote',['sass', 'connect', 'spottr', 'print-remote', 'watch']);
+    grunt.registerTask('spottr', function (err) {
+        var server = new SpottrServer();
+        server.start();
+    });
     grunt.registerTask('print-remote', function (err) {
         var ifaces = os.networkInterfaces();
         console.log('Your remote server is browser-accessible via these URLs:')

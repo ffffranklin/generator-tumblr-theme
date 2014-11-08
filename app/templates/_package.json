@@ -1,7 +1,9 @@
 {
     "name": "package",
     "version": "0.0.0",
-    "dependencies": {},
+    "dependencies": {
+        "spottr": "git://github.com/ffffranklin/spottr"
+    },
     "devDependencies": {
         "grunt-contrib-sass": "^0.8.1",
         "grunt-contrib-watch": "~0.6.1",
