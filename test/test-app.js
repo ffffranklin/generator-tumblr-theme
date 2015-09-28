@@ -10,11 +10,11 @@ describe('tumblr-theme:app', function () {
     before(function (done) {
         helpers.run(path.join(__dirname, '../app'))
             .inDir(path.join(os.tmpdir(), './temp-test'))
-            .withOptions({ 'skip-install': true })
-            .withPrompt({
-                someOption: true
+            .withPrompts({
+                customContent: 'Yes',
+                customUrl: 'http://www.test.com'
             })
-            .on('end', done);
+            .on('end', done)
     });
 
     it('creates files', function () {
