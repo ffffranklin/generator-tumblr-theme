@@ -96,7 +96,10 @@ var TumblrThemeGenerator = yeoman.generators.Base.extend({
 
     install: function () {
         this.installDependencies({
-            skipInstall: (this.options['skip-install'] || this.options['skipInstall'])
+            skipInstall: (
+                this.options['skip-install']
+                || this.options.skipInstall
+            )
         });
     }
 

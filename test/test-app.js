@@ -14,7 +14,7 @@ describe('tumblr-theme:app', function () {
                 customContent: 'Yes',
                 customUrl: 'http://www.test.com'
             })
-            .on('end', done)
+            .on('end', done);
     });
 
     it('creates files', function () {
