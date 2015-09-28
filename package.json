@@ -1,6 +1,6 @@
 {
     "name": "generator-tumblr-theme",
-    "version": "0.3.0",
+    "version": "0.3.0-a",
     "description": "A tumblr theme generator for Yeoman",
     "homepage": "https://github.com/ffffranklin/generator-tumblr-theme",
     "bugs": "https://github.com/ffffranklin/generator-tumblr-theme/issues",
@@ -24,7 +24,7 @@
         "yeoman-generator"
     ],
     "dependencies": {
-        "yeoman-generator": "^0.17.7",
+        "yeoman-generator": "^0.18.0",
         "chalk": "^0.5.1",
         "yosay": "^1.0.0"
     },
