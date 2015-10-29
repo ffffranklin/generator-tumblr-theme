@@ -4,6 +4,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
+var mkdirp = require('mkdirp')
 
 var TumblrThemeGenerator = yeoman.generators.Base.extend({
 
@@ -43,14 +44,17 @@ var TumblrThemeGenerator = yeoman.generators.Base.extend({
     writing: {
 
         app: function () {
-            this.dest.mkdir('app');
-            this.dest.mkdir('app/themr');
-            this.dest.mkdir('app/themr/javascripts');
-            this.dest.mkdir('app/theme');
-            this.dest.mkdir('app/theme/styles');
-            this.dest.mkdir('app/theme/scripts');
-            this.src.copy('_package.json', 'package.json');
-            this.src.copy('_bower.json', 'bower.json');
+            mkdirp('app/themr/javascripts');
+            mkdirp('app/theme/styles');
+            mkdirp('app/theme/scripts');
+            this.fs.copyTpl(
+                this.templatePath('_package.json'),
+                this.destinationPath('package.json')
+            );
+            this.fs.copyTpl(
+                this.templatePath('_bower.json'),
+                this.destinationPath('bower.json')
+            );
         },
 
         createconfig: function () {
@@ -73,24 +77,60 @@ var TumblrThemeGenerator = yeoman.generators.Base.extend({
         },
 
         projectfiles: function () {
-            this.src.copy('editorconfig', '.editorconfig');
-            this.src.copy('jshintrc', '.jshintrc');
+            this.fs.copyTpl(
+                this.templatePath('editorconfig'),
+                this.destinationPath('.editorconfig')
+            );
+            this.fs.copyTpl(
+                this.templatePath('jshintrc'),
+                this.destinationPath('.jshintrc')
+            );
         },
 
         createthemr: function () {
-            this.src.copy('index.html', 'app/index.html');
-            this.src.copy('spinner.gif', 'app/themr/images/spinner.gif');
-            this.src.copy('tumblr-themr-1.0.js', 'app/themr/javascripts/tumblr-themr-1.0.js');
-            this.src.copy('jquery-1.6.4.min.js', 'app/themr/javascripts/jquery-1.6.4.min.js');
-            this.src.copy('sammy.js', 'app/themr/javascripts/sammy.js');
-            this.src.copy('sammy.handlebars.js', 'app/themr/javascripts/sammy.handlebars.js');
+            this.fs.copyTpl(
+                this.templatePath('index.html'),
+                this.destinationPath('app/index.html')
+            );
+            this.fs.copyTpl(
+                this.templatePath('spinner.gif'),
+                this.destinationPath('app/themr/images/spinner.gif')
+            );
+            this.fs.copyTpl(
+                this.templatePath('tumblr-themr-1.0.js'),
+                this.destinationPath('app/themr/javascripts/tumblr-themr-1.0.js')
+            );
+            this.fs.copyTpl(
+                this.templatePath('jquery-1.6.4.min.js'),
+                this.destinationPath('app/themr/javascripts/jquery-1.6.4.min.js')
+            );
+            this.fs.copyTpl(
+                this.templatePath('sammy.js'),
+                this.destinationPath('app/themr/javascripts/sammy.js')
+            );
+            this.fs.copyTpl(
+                this.templatePath('sammy.handlebars.js'),
+                this.destinationPath('app/themr/javascripts/sammy.handlebars.js')
+            );
         },
 
         demotheme: function () {
-            this.src.copy('theme.tumblr', 'app/theme.tumblr');
-            this.src.copy('jquery-1.6.4.min.js', 'app/theme/scripts/jquery-1.6.4.min.js');
-            this.src.copy('theme.scss', 'app/theme/styles/main.scss');
-            this.src.copy('theme.js', 'app/theme/scripts/main.js');
+            this.fs.copyTpl(
+                this.templatePath('theme.tumblr'),
+                this.destinationPath('app/theme.tumblr')
+            );
+            this.fs.copyTpl(
+                this.templatePath('jquery-1.6.4.min.js'),
+                this.destinationPath('app/theme/scripts/jquery-1.6.4.min.js')
+            );
+            this.fs.copyTpl(
+                this.templatePath('theme.scss'),
+                this.destinationPath('app/theme/styles/main.scss')
+            );
+            this.fs.copyTpl(
+                this.templatePath('theme.js'),
+                this.destinationPath('app/theme/scripts/main.js')
+            );
         }
     },
 
