@@ -24,7 +24,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "^1.1.1",
+    "chalk": "^4.1.0",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.21.1",
     "yosay": "^1.0.0"
