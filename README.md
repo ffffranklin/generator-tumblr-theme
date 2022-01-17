@@ -1,4 +1,4 @@
-# Tumblr Theme generator 
+# Tumblr Theme generator (deprecated)
 
 [![Build Status](https://secure.travis-ci.org/ffffranklin/generator-tumblr-theme.svg?branch=master)](https://travis-ci.org/ffffranklin/generator-tumblr-theme)
 [![NPM version](https://badge.fury.io/js/generator-tumblr-theme.svg)](http://badge.fury.io/js/generator-tumblr-theme)
